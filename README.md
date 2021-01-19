@@ -1,3 +1,11 @@
+===============
+
+ISTRUZIONI:
+1) installare Bootstrap
+2) installare faker da npm
+
+===============
+
 # TypingGame
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
