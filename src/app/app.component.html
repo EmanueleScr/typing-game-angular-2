@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <div class="col-6-lg col-12-md">
+        <div class="card mt-5">
+          <div class="card-body">
+            <h1 class="card-title display-5 font-weight-light">Typing Game</h1>
+            <p class="card-text font-weight-light text-secondary">Scrivi la seguente frase nel campo qui sotto:</p>
+            <span 
+            *ngFor="let letter of randomTxt.split(''); let i = index;"
+            [class]='onCompare(letter, userTxt[i])'
+            >{{letter}}</span>
+            <input class="form-control mt-2" type="text"
+            (input)="onInput($event.target.value)"
+            >
+            <div class="alert alert-success mt-3"
+            *ngIf="randomTxt === userTxt"
+            >
+              Frase inserita correttamente!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
